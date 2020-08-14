@@ -1,0 +1,30 @@
+config:
+    name: 获取登陆用户信息
+    variables: {}
+    base_url: http://staging.lsspgyl.com/purchaser-api/
+teststeps:
+#-   name: 调用login
+#    testcase: testcases/one_login.yml       #前置登陆的login   解耦
+
+-   name: 获取myinfo
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+            X-Authorization : $token
+        method: GET
+        url: v1/userInfo/myInfo
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - 成功
+    -   eq:
+        - content.data.userInfo.mobile
+        - '13000000000'

@@ -1,0 +1,69 @@
+2020-08-14 14:13:39.745 | INFO     | httprunner.loader:load_dot_env_file:127 - Loading environment variables from D:\启明星\first_httprunner\.env
+2020-08-14 14:13:39.746 | DEBUG    | httprunner.utils:set_os_environ:33 - Set OS environment variable: USERNAME
+2020-08-14 14:13:39.746 | DEBUG    | httprunner.utils:set_os_environ:33 - Set OS environment variable: PASSWORD
+2020-08-14 14:13:39.750 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 登陆账号13000000000, TestCase ID: a9da9da4-9931-44b7-b9d0-c23ff0fa2ae3
+2020-08-14 14:13:39.751 | INFO     | httprunner.runner:__run_step:292 - run step begin: 1.测试环境登陆接口，并且提取参数 >>>>>>
+2020-08-14 14:13:40.297 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 59075
+2020-08-14 14:13:40.299 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-14 14:13:40.300 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/v1/userAuth/login
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "HRUN-Request-ID": "HRUN-a9da9da4-9931-44b7-b9d0-c23ff0fa2ae3-619752",
+    "Content-Length": "50"
+}
+cookies  : {}
+body     : {
+    "password": "qwe123456",
+    "userName": 13000000000
+}
+
+2020-08-14 14:13:40.303 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Fri, 14 Aug 2020 06:14:13 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 0,
+    "msg": "\u6210\u529f",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MmQxNTc3YzU3NWM0OGMxODAzY2Q2NjM0MDAzMjliOCIsImNyZWF0ZWQiOjE1OTczODU2NTMxNDksImV4cCI6MTU5NzM4NzQ1M30.ziz2Jfg3S_oMSPgbtjtzKzX9Twt8F9L0SXo75UDe5wQ9Qpr80vaaZsQiBz0i3a5E9Z9_bJroGGkeDkt8FFwMug",
+        "state": 1,
+        "comment": null,
+        "id": 1,
+        "userId": 1,
+        "corporateName": "\u56db\u5ddd\u7701-\u7701\u7ea7\u91c7\u8d2d\u65b9\uff08\u6ce8\u518c\u5355\u4f4d\u540d\u79f0\uff09",
+        "unifiedCode": "111111111111111111",
+        "realName": "\u6ce8\u518c\u7684\u59d3\u540d",
+        "mobile": "13000000000",
+        "areaId": 547274,
+        "areaName": "\u56db\u5ddd,\u6210\u90fd",
+        "address": "\u6210\u90fd\u5e02\u91d1\u725b\u533a",
+        "deptName": "\u6ce8\u518c\u65f6\u7684\u90e8\u95e8\u4e3a\u91c7\u8d2d\u90e8",
+        "imgName": "0786033590d349d2981d2d79e1f44ce1.jpeg"
+    }
+}
+
+2020-08-14 14:13:40.305 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 545.0 ms, response_length: 0 bytes
+2020-08-14 14:13:40.306 | INFO     | httprunner.response:extract:176 - extract mapping: {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MmQxNTc3YzU3NWM0OGMxODAzY2Q2NjM0MDAzMjliOCIsImNyZWF0ZWQiOjE1OTczODU2NTMxNDksImV4cCI6MTU5NzM4NzQ1M30.ziz2Jfg3S_oMSPgbtjtzKzX9Twt8F9L0SXo75UDe5wQ9Qpr80vaaZsQiBz0i3a5E9Z9_bJroGGkeDkt8FFwMug'}
+2020-08-14 14:13:40.307 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-14 14:13:40.308 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json(str)	==> pass
+2020-08-14 14:13:40.309 | INFO     | httprunner.response:validate:246 - assert body.code equal 0(int)	==> pass
+2020-08-14 14:13:40.310 | INFO     | httprunner.response:validate:246 - assert body.msg equal 成功(str)	==> pass
+2020-08-14 14:13:40.311 | INFO     | httprunner.runner:__run_step:304 - run step end: 1.测试环境登陆接口，并且提取参数 <<<<<<
+
+2020-08-14 14:13:40.312 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\a9da9da4-9931-44b7-b9d0-c23ff0fa2ae3.run.log

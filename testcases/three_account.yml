@@ -1,0 +1,28 @@
+config:
+    name: 查看用户组织部门
+    variables: {}
+    base_url: http://staging.lsspgyl.com/purchaser-api/
+teststeps:
+
+-   name: 获取account
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+            X-Authorization : $token
+        method: GET
+        url: v1/userInfo/account
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.code
+        - 0
+    -   eq:
+        - content.msg
+        - 成功
+    -   eq:
+        - content.data.deptName
+        - 注册时的部门为采购部

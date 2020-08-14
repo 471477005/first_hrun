@@ -1,0 +1,58 @@
+2020-08-14 14:13:40.341 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 查看用户组织部门, TestCase ID: 125035ef-7d8b-494c-9906-5a17b0766242
+2020-08-14 14:13:40.343 | INFO     | httprunner.runner:__run_step:292 - run step begin: 获取account >>>>>>
+2020-08-14 14:13:40.796 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 59076
+2020-08-14 14:13:40.797 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-14 14:13:40.799 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://staging.lsspgyl.com/purchaser-api/v1/userInfo/account
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MmQxNTc3YzU3NWM0OGMxODAzY2Q2NjM0MDAzMjliOCIsImNyZWF0ZWQiOjE1OTczODU2NTMxNDksImV4cCI6MTU5NzM4NzQ1M30.ziz2Jfg3S_oMSPgbtjtzKzX9Twt8F9L0SXo75UDe5wQ9Qpr80vaaZsQiBz0i3a5E9Z9_bJroGGkeDkt8FFwMug",
+    "HRUN-Request-ID": "HRUN-125035ef-7d8b-494c-9906-5a17b0766242-620344"
+}
+cookies  : {}
+body     : None
+
+2020-08-14 14:13:40.802 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Fri, 14 Aug 2020 06:14:13 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MmQxNTc3YzU3NWM0OGMxODAzY2Q2NjM0MDAzMjliOCIsImNyZWF0ZWQiOjE1OTczODU2NTMxNDksImV4cCI6MTU5NzM4NzQ1M30.ziz2Jfg3S_oMSPgbtjtzKzX9Twt8F9L0SXo75UDe5wQ9Qpr80vaaZsQiBz0i3a5E9Z9_bJroGGkeDkt8FFwMug; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1MmQxNTc3YzU3NWM0OGMxODAzY2Q2NjM0MDAzMjliOCIsImNyZWF0ZWQiOjE1OTczODU2NTMxNDksImV4cCI6MTU5NzM4NzQ1M30.ziz2Jfg3S_oMSPgbtjtzKzX9Twt8F9L0SXo75UDe5wQ9Qpr80vaaZsQiBz0i3a5E9Z9_bJroGGkeDkt8FFwMug"
+}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 0,
+    "msg": "\u6210\u529f",
+    "data": {
+        "avatar": "a78897d8-8083-43f3-cd73-1ce56f5880ce.jpeg",
+        "deptName": "\u6ce8\u518c\u65f6\u7684\u90e8\u95e8\u4e3a\u91c7\u8d2d\u90e8",
+        "realName": "\u6ce8\u518c\u7684\u59d3\u540d",
+        "unPay": 0,
+        "unDeliver": 3,
+        "unReceive": 0,
+        "finished": 80
+    }
+}
+
+2020-08-14 14:13:40.803 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 451.0 ms, response_length: 0 bytes
+2020-08-14 14:13:40.804 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-14 14:13:40.805 | INFO     | httprunner.response:validate:246 - assert body.code equal 0(int)	==> pass
+2020-08-14 14:13:40.806 | INFO     | httprunner.response:validate:246 - assert body.msg equal 成功(str)	==> pass
+2020-08-14 14:13:40.807 | INFO     | httprunner.response:validate:246 - assert body.data.deptName equal 注册时的部门为采购部(str)	==> pass
+2020-08-14 14:13:40.808 | INFO     | httprunner.runner:__run_step:304 - run step end: 获取account <<<<<<
+
+2020-08-14 14:13:40.809 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\125035ef-7d8b-494c-9906-5a17b0766242.run.log

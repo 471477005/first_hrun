@@ -1,0 +1,10 @@
+config:
+  name: 'demo paramenters'
+
+
+testcases:
+-
+    name: login system
+    testcase: testcases/one_login.yml
+    parameters:
+        username-password: ["13000000000","qwe123456"]
