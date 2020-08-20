@@ -1,0 +1,37 @@
+config:
+    name: 结算
+    base_url: http://staging.lsspgyl.com/purchaser-api/
+#    parameters:
+#          name-phone-city-addr-addrtag-default-msg-title: ${parameterize(data/addr.csv)}
+teststeps:
+-   name: 订单结算
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+            X-Authorization : $token
+        json:
+          payType: 1
+          receivingAddressId: $addr_id
+          settlementId: $settlementId
+          supplierOrderList:
+            aidFlag: 0
+            freightGroupList: []
+            message: "httprunner脚本生成接口订单"
+            supplierId: $supplierId
+            itemList:
+               freight: 1024
+               goodsId: $goodsId
+
+        method: POST
+        url: /order-api/v1/order/submit
+
+
+    validate:
+    -   eq:
+        - content.msg
+        - 成功
+    -   eq:
+        - content.success
+        - true

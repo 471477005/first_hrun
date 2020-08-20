@@ -1,0 +1,96 @@
+2020-08-20 17:04:55.923 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 获取登陆用户信息, TestCase ID: 5c2b3c6a-449c-44af-a4b8-a2194346da3e
+2020-08-20 17:04:55.925 | INFO     | httprunner.runner:__run_step:292 - run step begin: 获取myinfo >>>>>>
+2020-08-20 17:04:56.223 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56325
+2020-08-20 17:04:56.224 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:04:56.225 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://staging.lsspgyl.com/purchaser-api/v1/userInfo/myInfo
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+    "HRUN-Request-ID": "HRUN-5c2b3c6a-449c-44af-a4b8-a2194346da3e-295926"
+}
+cookies  : {}
+body     : None
+
+2020-08-20 17:04:56.228 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:47 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q"
+}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 0,
+    "msg": "\u6210\u529f",
+    "data": {
+        "supplierInfoPageRes": null,
+        "purchaserInfoRes": null,
+        "auditRes": null,
+        "userInfo": {
+            "id": 49,
+            "orgId": 1,
+            "orgType": 1,
+            "avatar": "default-head-56703b4ac8af3e.gif",
+            "realName": "\u6d4b\u8bd5\u6dfb\u52a0\u98df\u6750\u540e\u6ce8\u518c",
+            "nickName": "",
+            "idCard": "",
+            "sex": 0,
+            "birthday": null,
+            "mobile": "13000000001",
+            "email": "",
+            "state": 1,
+            "tenantId": 2019100001,
+            "createTime": [
+                2020,
+                5,
+                4,
+                16,
+                53,
+                12
+            ],
+            "updateTime": [
+                2020,
+                5,
+                4,
+                16,
+                54,
+                56
+            ],
+            "areaId": null,
+            "job": "",
+            "personalSignature": "",
+            "deptName": "\u7709\u5c71\u5e02\u8d26\u53f7\u6240\u5c5e\u90e8\u95e8"
+        },
+        "roleType": 0,
+        "avatar": "default-head-56703b4ac8af3e.gif",
+        "provinceId": null,
+        "provinceName": null,
+        "provinceList": null,
+        "cityId": null,
+        "cityName": null,
+        "cityList": null
+    }
+}
+
+2020-08-20 17:04:56.228 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 297.0 ms, response_length: 0 bytes
+2020-08-20 17:04:56.229 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-20 17:04:56.230 | INFO     | httprunner.response:validate:246 - assert body.code equal 0(int)	==> pass
+2020-08-20 17:04:56.230 | INFO     | httprunner.response:validate:246 - assert body.msg equal 成功(str)	==> pass
+2020-08-20 17:04:56.231 | INFO     | httprunner.runner:__run_step:304 - run step end: 获取myinfo <<<<<<
+
+2020-08-20 17:04:56.232 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\5c2b3c6a-449c-44af-a4b8-a2194346da3e.run.log

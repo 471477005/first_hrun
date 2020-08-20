@@ -1,0 +1,71 @@
+2020-08-20 17:05:00.226 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 食材数量输入英文, TestCase ID: 0c8c4cc9-026d-4858-bbdb-228c1b934f08
+2020-08-20 17:05:00.226 | INFO     | httprunner.runner:__run_step:292 - run step begin: 接口添加食材至购物车 >>>>>>
+2020-08-20 17:05:00.329 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56346
+2020-08-20 17:05:00.330 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:05:00.331 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/v1/shoppingTrolley/add
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+    "HRUN-Request-ID": "HRUN-0c8c4cc9-026d-4858-bbdb-228c1b934f08-300227",
+    "Content-Length": "36"
+}
+cookies  : {}
+body     : {
+    "goodsInfoId": 38,
+    "quantity": "a"
+}
+
+2020-08-20 17:05:00.332 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:51 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q"
+}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 100001,
+    "msg": "\u7cfb\u7edf\u5f02\u5e38"
+}
+
+2020-08-20 17:05:00.333 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 102.0 ms, response_length: 0 bytes
+2020-08-20 17:05:00.334 | ERROR    | httprunner.response:validate:263 - assert body.msg equal 数量输入有误(str)	==> fail
+check_item: body.msg
+check_value: 系统异常(str)
+assert_method: equal
+expect_value: 数量输入有误(str)
+2020-08-20 17:05:00.337 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://staging.lsspgyl.com/purchaser-api/v1/shoppingTrolley/add
+method: POST
+headers: {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36', 'X-Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q', 'HRUN-Request-ID': 'HRUN-0c8c4cc9-026d-4858-bbdb-228c1b934f08-300227'}
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: {'goodsInfoId': 38, 'quantity': 'a'}
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx/1.17.3', 'Date': 'Thu, 20 Aug 2020 09:05:51 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/'}
+body: '{"code":100001,"msg":"系统异常"}'
+
+2020-08-20 17:05:00.339 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\0c8c4cc9-026d-4858-bbdb-228c1b934f08.run.log

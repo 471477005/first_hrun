@@ -5,6 +5,7 @@ config:
 teststeps:
 
 -   name: 获取account
+
     request:
         headers:
             Content-Type: application/json;charset=UTF-8
@@ -23,6 +24,6 @@ teststeps:
     -   eq:
         - content.msg
         - 成功
-    -   eq:
-        - content.data.deptName
-        - 注册时的部门为采购部
+#    -   eq:
+#        - content.data.deptName
+#        - 注册时的部门为采购部

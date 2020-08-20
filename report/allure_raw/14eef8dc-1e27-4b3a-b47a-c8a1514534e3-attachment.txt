@@ -1,0 +1,74 @@
+2020-08-20 17:05:01.759 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 获取快递费用, TestCase ID: 76c41472-b75d-40ae-a26a-3f0a291f44fa
+2020-08-20 17:05:01.760 | INFO     | httprunner.runner:__run_step:292 - run step begin: 锁定快递模板费用并且获取模板密码 >>>>>>
+2020-08-20 17:05:02.102 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56353
+2020-08-20 17:05:02.103 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:05:02.104 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/order-api/v1/order/settlement
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+    "HRUN-Request-ID": "HRUN-76c41472-b75d-40ae-a26a-3f0a291f44fa-301761",
+    "Content-Length": "27"
+}
+cookies  : {}
+body     : {
+    "receivingAddressId": 202
+}
+
+2020-08-20 17:05:02.105 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:52 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Content-Length": "131",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q"
+}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "code": 200108,
+    "count": null,
+    "data": null,
+    "msg": "\u6ca1\u6709\u5546\u54c1\u9700\u8981\u7ed3\u7b97\uff0c\u8bf7\u68c0\u67e5\u8d2d\u4e70\u7684\u5546\u54c1\u662f\u5426\u5df2\u5931\u6548",
+    "success": false
+}
+
+2020-08-20 17:05:02.106 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 341.0 ms, response_length: 0 bytes
+2020-08-20 17:05:02.107 | INFO     | httprunner.response:extract:176 - extract mapping: {'settlementId': None, 'goodsId': None, 'supplierId': None}
+2020-08-20 17:05:02.108 | ERROR    | httprunner.response:validate:263 - assert body.msg equal 成功(str)	==> fail
+check_item: body.msg
+check_value: 没有商品需要结算，请检查购买的商品是否已失效(str)
+assert_method: equal
+expect_value: 成功(str)
+2020-08-20 17:05:02.108 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://staging.lsspgyl.com/purchaser-api/order-api/v1/order/settlement
+method: POST
+headers: {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36', 'X-Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q', 'HRUN-Request-ID': 'HRUN-76c41472-b75d-40ae-a26a-3f0a291f44fa-301761'}
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: {'receivingAddressId': 202}
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx/1.17.3', 'Date': 'Thu, 20 Aug 2020 09:05:52 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '131', 'Connection': 'keep-alive', 'Set-Cookie': 'Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/'}
+body: '{"code":200108,"count":null,"data":null,"msg":"没有商品需要结算，请检查购买的商品是否已失效","success":false}'
+
+2020-08-20 17:05:02.110 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\76c41472-b75d-40ae-a26a-3f0a291f44fa.run.log

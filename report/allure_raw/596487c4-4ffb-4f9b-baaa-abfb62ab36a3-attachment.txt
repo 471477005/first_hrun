@@ -1,0 +1,49 @@
+2020-08-20 17:04:55.182 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 账号错误密码错误, TestCase ID: 7f783978-47bb-42eb-841d-a8da9452fe73
+2020-08-20 17:04:55.183 | INFO     | httprunner.runner:__run_step:292 - run step begin: 输入登陆账号、密码 >>>>>>
+2020-08-20 17:04:55.380 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56321
+2020-08-20 17:04:55.381 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:04:55.382 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/v1/userAuth/login
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "HRUN-Request-ID": "HRUN-7f783978-47bb-42eb-841d-a8da9452fe73-295183",
+    "Content-Length": "46"
+}
+cookies  : {}
+body     : {
+    "password": "qwe",
+    "userName": "13591165888"
+}
+
+2020-08-20 17:04:55.383 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:46 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 110016,
+    "msg": "\u7528\u6237\u540d\u6216\u8005\u5bc6\u7801\u9519\u8bef"
+}
+
+2020-08-20 17:04:55.384 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 197.0 ms, response_length: 0 bytes
+2020-08-20 17:04:55.384 | INFO     | httprunner.response:extract:176 - extract mapping: {'token': None}
+2020-08-20 17:04:55.385 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-20 17:04:55.385 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json(str)	==> pass
+2020-08-20 17:04:55.386 | INFO     | httprunner.response:validate:246 - assert body.msg equal 用户名或者密码错误(str)	==> pass
+2020-08-20 17:04:55.386 | INFO     | httprunner.runner:__run_step:304 - run step end: 输入登陆账号、密码 <<<<<<
+
+2020-08-20 17:04:55.387 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\7f783978-47bb-42eb-841d-a8da9452fe73.run.log

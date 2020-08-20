@@ -1,0 +1,71 @@
+2020-08-20 17:04:59.349 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 输入不存在的食材id, TestCase ID: 354e1fc5-6e2b-4090-bcf9-5f2a0c511768
+2020-08-20 17:04:59.350 | INFO     | httprunner.runner:__run_step:292 - run step begin: 接口添加食材至购物车 >>>>>>
+2020-08-20 17:04:59.604 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56341
+2020-08-20 17:04:59.604 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:04:59.605 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/v1/shoppingTrolley/add
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+    "HRUN-Request-ID": "HRUN-354e1fc5-6e2b-4090-bcf9-5f2a0c511768-299351",
+    "Content-Length": "37"
+}
+cookies  : {}
+body     : {
+    "goodsInfoId": 10086,
+    "quantity": 1
+}
+
+2020-08-20 17:04:59.606 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:50 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q"
+}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 200112,
+    "msg": "\u65e0\u6548\u5546\u54c1\uff0c\u65e0\u6cd5\u6dfb\u52a0\u81f3\u8d2d\u7269\u8f66"
+}
+
+2020-08-20 17:04:59.607 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 253.0 ms, response_length: 0 bytes
+2020-08-20 17:04:59.607 | ERROR    | httprunner.response:validate:263 - assert body.msg equal 没有该食材(str)	==> fail
+check_item: body.msg
+check_value: 无效商品，无法添加至购物车(str)
+assert_method: equal
+expect_value: 没有该食材(str)
+2020-08-20 17:04:59.610 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://staging.lsspgyl.com/purchaser-api/v1/shoppingTrolley/add
+method: POST
+headers: {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36', 'X-Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q', 'HRUN-Request-ID': 'HRUN-354e1fc5-6e2b-4090-bcf9-5f2a0c511768-299351'}
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: {'goodsInfoId': 10086, 'quantity': 1}
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx/1.17.3', 'Date': 'Thu, 20 Aug 2020 09:05:50 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/'}
+body: '{"code":200112,"msg":"无效商品，无法添加至购物车"}'
+
+2020-08-20 17:04:59.611 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\354e1fc5-6e2b-4090-bcf9-5f2a0c511768.run.log

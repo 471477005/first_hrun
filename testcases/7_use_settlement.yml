@@ -1,0 +1,36 @@
+config:
+    name: 获取快递费用
+    base_url: http://staging.lsspgyl.com/purchaser-api/
+#    parameters:
+#          name-phone-city-addr-addrtag-default-msg-title: ${parameterize(data/addr.csv)}
+teststeps:
+-   name: 锁定快递模板费用并且获取模板密码
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+            X-Authorization : $token
+        json:
+          receivingAddressId: $addr_id
+
+        method: POST
+        url: /order-api/v1/order/settlement
+
+    extract:
+      settlementId: content.data.settlementId
+      goodsId: content.data.supplierOrderList[0].itemList[0].goodsId
+      supplierId: content.data.supplierOrderList[0].supplierId
+
+    validate:
+    -   eq:
+        - content.msg
+        - 成功
+
+#    -   eq:
+#        - content.data.settlementId
+#        - $settlementId
+#
+#    -   eq:
+#        - content.data.supplierOrderList[0].itemList[0].goodsId
+#        - 38

@@ -1,0 +1,28 @@
+config:
+    name: 获取采购方收货地址id
+    base_url: http://staging.lsspgyl.com/purchaser-api/
+
+teststeps:
+-   name: 获取地址id
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+            X-Authorization : $token
+
+
+        method: GET
+        url: /v1/purchaserAddress/page
+
+    extract:
+      addr_id: content.data[0].id
+
+    validate:
+    -   eq:
+        - content.msg
+        - 成功
+
+#    -   eq:
+#        - content.data[0].id
+#        - 191

@@ -1,0 +1,194 @@
+2020-08-20 17:05:01.554 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 获取采购方收货地址id, TestCase ID: 4cd7cb34-8ce2-4300-8187-7329cc1e9175
+2020-08-20 17:05:01.554 | INFO     | httprunner.runner:__run_step:292 - run step begin: 获取地址id >>>>>>
+2020-08-20 17:05:01.735 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56352
+2020-08-20 17:05:01.736 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:05:01.737 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://staging.lsspgyl.com/purchaser-api/v1/purchaserAddress/page
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+    "HRUN-Request-ID": "HRUN-4cd7cb34-8ce2-4300-8187-7329cc1e9175-301554"
+}
+cookies  : {}
+body     : None
+
+2020-08-20 17:05:01.739 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:52 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q"
+}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 0,
+    "msg": "\u6210\u529f",
+    "count": 20,
+    "data": [
+        {
+            "id": 202,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116050,
+            "provinceName": "\u5df4\u5f66\u5854\u62c9\u9547",
+            "areaName": "\u5df4\u5f66\u5854\u62c9\u9547 \u6556\u5305\u97f3\u9ad8\u52d2\u560e\u67e5",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "130000",
+            "email": "",
+            "defaultFlag": 1
+        },
+        {
+            "id": 204,
+            "alias": "\u5730\u5740\u6807\u7b7e\u5730\u5740\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13000000000",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 200,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13522222222",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 201,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116050,
+            "provinceName": "\u5df4\u5f66\u5854\u62c9\u9547",
+            "areaName": "\u5df4\u5f66\u5854\u62c9\u9547 \u6556\u5305\u97f3\u9ad8\u52d2\u560e\u67e5",
+            "consignee": "\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13000000000",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 195,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116050,
+            "provinceName": "\u5df4\u5f66\u5854\u62c9\u9547",
+            "areaName": "\u5df4\u5f66\u5854\u62c9\u9547 \u6556\u5305\u97f3\u9ad8\u52d2\u560e\u67e5",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "130000",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 199,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13591111111",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 197,
+            "alias": "\u5730\u5740\u6807\u7b7e\u5730\u5740\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13000000000",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 198,
+            "alias": "\u5730\u5740\u6807\u7b7e\u5730\u5740\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "abcdefg",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 194,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116050,
+            "provinceName": "\u5df4\u5f66\u5854\u62c9\u9547",
+            "areaName": "\u5df4\u5f66\u5854\u62c9\u9547 \u6556\u5305\u97f3\u9ad8\u52d2\u560e\u67e5",
+            "consignee": "\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a\u59d3\u540d\u8d85\u8fc7\u5341\u4e2a",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13000000000",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 192,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13591111111",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 193,
+            "alias": "\u5730\u5740\u6807\u7b7e",
+            "areaId": 116041,
+            "provinceName": "\u65b0\u5b9d\u62c9\u683c\u9547",
+            "areaName": "\u65b0\u5b9d\u62c9\u683c\u9547 \u5b9d\u62c9\u683c\u5c45\u59d4\u4f1a",
+            "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+            "address": "\u8be6\u7ec6\u5730\u5740",
+            "mobile": "13522222222",
+            "email": "",
+            "defaultFlag": 0
+        },
+        {
+            "id": 191,
+            "alias": "dsdsad \u5317\u4eac\u5e02",
+            "areaId": 2,
+            "provinceName": "\u5317\u4eac\u5e02",
+            "areaName": "\u5317\u4eac\u5e02 \u76f4\u8f96\u533a",
+            "consignee": "dsdsad",
+            "address": "11111111",
+            "mobile": "13000000000",
+            "email": "",
+            "defaultFlag": 0
+        }
+    ]
+}
+
+2020-08-20 17:05:01.740 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 180.0 ms, response_length: 0 bytes
+2020-08-20 17:05:01.741 | INFO     | httprunner.response:extract:176 - extract mapping: {'addr_id': 202}
+2020-08-20 17:05:01.741 | INFO     | httprunner.response:validate:246 - assert body.msg equal 成功(str)	==> pass
+2020-08-20 17:05:01.742 | INFO     | httprunner.runner:__run_step:304 - run step end: 获取地址id <<<<<<
+
+2020-08-20 17:05:01.743 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\4cd7cb34-8ce2-4300-8187-7329cc1e9175.run.log

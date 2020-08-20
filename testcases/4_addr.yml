@@ -1,0 +1,28 @@
+config:
+    name: $title
+    base_url: http://staging.lsspgyl.com/purchaser-api/
+    parameters:
+          name-phone-city-addr-addrtag-default-msg-title: ${parameterize(data/addr.csv)}
+teststeps:
+-   name: 收货地址接口测试
+
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+            X-Authorization : $token
+        json:
+            alias: $addrtag
+            consignee: $name
+            address: $addr
+            mobile: $phone
+            defaultFlag: $default
+            areaId: $city
+        method: POST
+        url: /v1/purchaserAddress/add
+
+    validate:
+    -   eq:
+        - content.msg
+        - $msg

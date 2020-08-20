@@ -1,0 +1,78 @@
+2020-08-20 17:04:58.885 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 手机号码为空, TestCase ID: b60b91d9-d3c1-40d9-a24a-0dd6cd56796c
+2020-08-20 17:04:58.886 | INFO     | httprunner.runner:__run_step:292 - run step begin: 收货地址接口测试 >>>>>>
+2020-08-20 17:04:59.001 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56338
+2020-08-20 17:04:59.002 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:04:59.003 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/v1/purchaserAddress/add
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "X-Authorization": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+    "HRUN-Request-ID": "HRUN-b60b91d9-d3c1-40d9-a24a-0dd6cd56796c-298886",
+    "Content-Length": "261"
+}
+cookies  : {}
+body     : {
+    "alias": "\u5730\u5740\u6807\u7b7e\u5730\u5740\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e\u5730\u5740\u6807\u7b7e",
+    "consignee": "\u6536\u4ef6\u4eba\u59d3\u540d",
+    "address": "\u8be6\u7ec6\u5730\u5740",
+    "mobile": "",
+    "defaultFlag": "0",
+    "areaId": "116041"
+}
+
+2020-08-20 17:04:59.004 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:49 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Set-Cookie": "Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/"
+}
+cookies  : {
+    "Purchaser-Token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q"
+}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 900000,
+    "msg": "\u6821\u9a8c\u9519\u8bef",
+    "data": {
+        "mobile": "\u8bf7\u8f93\u5165\u6536\u8d27\u8054\u7cfb\u4eba\u624b\u673a\u53f7"
+    }
+}
+
+2020-08-20 17:04:59.005 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 114.0 ms, response_length: 0 bytes
+2020-08-20 17:04:59.006 | ERROR    | httprunner.response:validate:263 - assert body.msg equal 手机号码不能为空(str)	==> fail
+check_item: body.msg
+check_value: 校验错误(str)
+assert_method: equal
+expect_value: 手机号码不能为空(str)
+2020-08-20 17:04:59.009 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://staging.lsspgyl.com/purchaser-api/v1/purchaserAddress/add
+method: POST
+headers: {'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36', 'X-Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q', 'HRUN-Request-ID': 'HRUN-b60b91d9-d3c1-40d9-a24a-0dd6cd56796c-298886'}
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: {'alias': '地址标签地址地址标签地址标签地址标签', 'consignee': '收件人姓名', 'address': '详细地址', 'mobile': '', 'defaultFlag': '0', 'areaId': '116041'}
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx/1.17.3', 'Date': 'Thu, 20 Aug 2020 09:05:49 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Set-Cookie': 'Purchaser-Token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q; Path=/'}
+body: '{"code":900000,"msg":"校验错误","data":{"mobile":"请输入收货联系人手机号"}}'
+
+2020-08-20 17:04:59.011 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\b60b91d9-d3c1-40d9-a24a-0dd6cd56796c.run.log

@@ -1,0 +1,65 @@
+2020-08-20 17:04:55.401 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 正确的账号密码01, TestCase ID: 35270048-aa15-4aed-a0f7-0682cfb44f91
+2020-08-20 17:04:55.402 | INFO     | httprunner.runner:__run_step:292 - run step begin: 输入登陆账号、密码 >>>>>>
+2020-08-20 17:04:55.893 | DEBUG    | httprunner.client:request:186 - client IP: 192.168.2.220, Port: 56323
+2020-08-20 17:04:55.894 | DEBUG    | httprunner.client:request:194 - server IP: 59.110.140.80, Port: 80
+2020-08-20 17:04:55.897 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : http://staging.lsspgyl.com/purchaser-api/v1/userAuth/login
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json;charset=UTF-8",
+    "HRUN-Request-ID": "HRUN-35270048-aa15-4aed-a0f7-0682cfb44f91-295403",
+    "Content-Length": "52"
+}
+cookies  : {}
+body     : {
+    "password": "qwe123456",
+    "userName": "13000000001"
+}
+
+2020-08-20 17:04:55.899 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.17.3",
+    "Date": "Thu, 20 Aug 2020 09:05:46 GMT",
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : None
+content_type : application/json
+body     : {
+    "code": 0,
+    "msg": "\u6210\u529f",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q",
+        "state": 1,
+        "comment": null,
+        "id": 15,
+        "userId": 49,
+        "corporateName": "\u7709\u5c71\u5e02\u91c7\u8d2d\u65b9",
+        "unifiedCode": "111111111111111111",
+        "realName": "\u6d4b\u8bd5\u6dfb\u52a0\u98df\u6750\u540e\u6ce8\u518c",
+        "mobile": "13000000001",
+        "areaId": 13413,
+        "areaName": "\u6cb3\u5317,\u77f3\u5bb6\u5e84",
+        "address": "\u6ce8\u518c\u7684\u5355\u4f4d\u8be6\u7ec6\u5730\u5740",
+        "deptName": "\u7709\u5c71\u5e02\u8d26\u53f7\u6240\u5c5e\u90e8\u95e8",
+        "imgName": "1273b699a767401ba19c45fa01459fcb.jpeg"
+    }
+}
+
+2020-08-20 17:04:55.899 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 490.0 ms, response_length: 0 bytes
+2020-08-20 17:04:55.900 | INFO     | httprunner.response:extract:176 - extract mapping: {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxYWE2ZmRkYjY2YzYxYmU2ZTY2ODk4OGM4MTkxOWNmNCIsImNyZWF0ZWQiOjE1OTc5MTQzNDY0NDcsImV4cCI6MTU5NzkxNjE0Nn0.iV8estRgOxlo-US0RE59csAi3k1hduZHjLf5yNoGZ-kown9XUsaL4ULJlBQk9NBUfprFKtd3KbKIXgE7HjIU6Q'}
+2020-08-20 17:04:55.901 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-20 17:04:55.901 | INFO     | httprunner.response:validate:246 - assert headers."Content-Type" equal application/json(str)	==> pass
+2020-08-20 17:04:55.902 | INFO     | httprunner.response:validate:246 - assert body.msg equal 成功(str)	==> pass
+2020-08-20 17:04:55.903 | INFO     | httprunner.runner:__run_step:304 - run step end: 输入登陆账号、密码 <<<<<<
+
+2020-08-20 17:04:55.903 | INFO     | httprunner.runner:test_start:460 - generate testcase log: D:\启明星\first_httprunner\logs\35270048-aa15-4aed-a0f7-0682cfb44f91.run.log
